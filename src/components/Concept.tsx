@@ -98,8 +98,8 @@ export default function Concept() {
           }}
         >
           <Image
-            src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80"
-            alt="Vice City Lounge ambiance"
+            src="/experience.png"
+            alt="Vice City Lounge ambiance Charleroi"
             width={800}
             height={600}
             style={{

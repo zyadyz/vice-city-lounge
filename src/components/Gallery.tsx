@@ -5,24 +5,19 @@ import Image from "next/image";
 
 const images = [
   {
-    src: "https://images.unsplash.com/photo-1571197284030-c6f6a25c3b9e?w=600&q=80",
-    alt: "Neon restaurant ambiance",
-    span: 2,
-  },
-  {
-    src: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&q=80",
-    alt: "Restaurant night ambiance",
+    src: "/gallery1.png",
+    alt: "Vice City Lounge — comptoir snack Charleroi",
     span: 1,
   },
   {
-    src: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80",
-    alt: "Food close up",
+    src: "/gallery2.png",
+    alt: "Vice City Lounge — façade extérieure neon Charleroi",
     span: 1,
   },
   {
-    src: "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=600&q=80",
-    alt: "Food flat lay",
-    span: 2,
+    src: "/gallery3.png",
+    alt: "Vice City Lounge — salle intérieure Charleroi",
+    span: 1,
   },
 ];
 
