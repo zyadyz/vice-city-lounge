@@ -1,0 +1,143 @@
+@import url('https://fonts.cdnfonts.com/css/pricedown');
+@import url('https://fonts.cdnfonts.com/css/pricedown-bl');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #07071A;
+  --bg-2: #0D0D2B;
+  --surface: #121232;
+  --accent: #DF87AE;
+  --accent-2: #00E5FF;
+  --accent-light: #E99BBE;
+  --accent-dim: rgba(223,135,174,0.15);
+  --gold: #FFB800;
+  --text: #F5E6FF;
+  --text-dim: rgba(245,230,255,0.6);
+  --line: rgba(223,135,174,0.12);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Pricedown Bl', 'Pricedown', cursive;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0,0,0,0.03) 2px,
+    rgba(0,0,0,0.03) 4px
+  );
+  pointer-events: none;
+  z-index: -1;
+}
+
+.text-neon-pink {
+  color: #DF87AE;
+  text-shadow: 0 0 10px #DF87AE, 0 0 30px #DF87AE, 0 0 60px rgba(223,135,174,0.5);
+}
+.text-neon-cyan {
+  color: #00E5FF;
+  text-shadow: 0 0 10px #00E5FF, 0 0 30px #00E5FF, 0 0 60px rgba(0,229,255,0.5);
+}
+.text-neon-gold {
+  color: #FFB800;
+  text-shadow: 0 0 10px #FFB800, 0 0 20px rgba(255,184,0,0.5);
+}
+
+.neon-border {
+  box-shadow: 0 0 10px #DF87AE, 0 0 30px rgba(223,135,174,0.3), inset 0 0 10px rgba(223,135,174,0.1);
+  border: 1px solid rgba(223,135,174,0.6);
+}
+.neon-border-cyan {
+  box-shadow: 0 0 10px #00E5FF, 0 0 30px rgba(0,229,255,0.3), inset 0 0 10px rgba(0,229,255,0.1);
+  border: 1px solid rgba(0,229,255,0.6);
+}
+
+.font-pricedown {
+  font-family: 'Pricedown', 'Righteous', cursive;
+}
+
+@keyframes neonFlicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    text-shadow: 0 0 10px #DF87AE, 0 0 30px #DF87AE, 0 0 60px #DF87AE, 0 0 100px #DF87AE;
+  }
+  20%, 24%, 55% {
+    text-shadow: none;
+    opacity: 0.95;
+  }
+}
+.neon-flicker {
+  animation: neonFlicker 6s infinite;
+}
+
+@keyframes gridScroll {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 60px; }
+}
+
+.retro-grid {
+  background-image:
+    linear-gradient(rgba(223,135,174,0.2) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(223,135,174,0.2) 1px, transparent 1px);
+  background-size: 60px 60px;
+  transform: perspective(500px) rotateX(60deg);
+  transform-origin: bottom;
+  animation: gridScroll 2s linear infinite;
+}
+
+@keyframes glowPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+.glow-pulse {
+  animation: glowPulse 3s ease-in-out infinite;
+}
+
+.section-label {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .retro-grid { animation: none; }
+}
