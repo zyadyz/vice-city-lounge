@@ -17,7 +17,6 @@ export default function Navbar() {
   }, []);
 
   const handleNav = (id: string) => {
-    setMenuOpen(false);
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: "smooth" });
   };
